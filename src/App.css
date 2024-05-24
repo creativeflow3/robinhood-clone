@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.app {
+  background-color: black;
+  /* height: fit-content; */
+  place-items: center;
+}
+
+.app__header {
+}
+
+.app__body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.app__container {
+  width: 1024px;
+  height: 100%;
+  display: flex;
+  padding: 0 48px;
+  color: #fff;
+}
