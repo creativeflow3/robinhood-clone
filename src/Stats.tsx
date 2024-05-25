@@ -33,7 +33,6 @@ function Stats(): ReactNode {
       // match with data from api
       if (stockData.length > 0) {
         for (let i = 0; i < data.length; i++) {
-          console.log('id', data);
           const ticker = data[i].ticker;
           const res = stockData.find(({ name }) => name === ticker);
           if (typeof res !== 'undefined') {

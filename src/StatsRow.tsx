@@ -1,6 +1,7 @@
-import { useEffect, useState, type ReactNode } from 'react';
+import { useState, type ReactNode } from 'react';
 import './StatsRow.css';
 import StockSVG from './assets/stock.svg';
+import NegStockSVG from './assets/negStock.svg';
 import { TickerType } from './types.ts';
 import { fetchStockTicker } from './api/getApiData';
 
@@ -26,7 +27,7 @@ function StatsRow({ name, openPrice, price, volume }: Row): ReactNode {
   };
 
   const shares = tickerData?.shares ? tickerData.shares : volume;
-
+  const stockImage = percentage < 0 ? NegStockSVG : StockSVG;
   return (
     <div className="row" onClick={buyStock}>
       <div className="row__intro">
@@ -34,11 +35,11 @@ function StatsRow({ name, openPrice, price, volume }: Row): ReactNode {
         <p>{shares && shares + ' shares'}</p>
       </div>
       <div className="row__chart">
-        <img src={StockSVG} height={16} />
+        <img src={stockImage} height={16} />
       </div>
       <div className="row__numbers">
         <p className="row__price">{price}</p>
-        <p className="row__percentage"> +{Number(percentage).toFixed(2)}%</p>
+        <p className="row__percentage"> {Number(percentage).toFixed(2)}%</p>
       </div>
     </div>
   );
