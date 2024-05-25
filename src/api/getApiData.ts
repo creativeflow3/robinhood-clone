@@ -8,7 +8,7 @@ import {
   updateDoc,
   doc,
 } from '../config/Firebase.ts';
-import { TickerType } from '../types.ts';
+import { TickerType, StockDataType } from '../types.ts';
 
 const FINNHUB_TOKEN = import.meta.env.VITE_FINNHUB_TOKEN;
 const FINNHUB_BASE_URL = import.meta.env.VITE_FINNHUB_BASE_URL;
@@ -41,11 +41,25 @@ export async function fetchStockTicker(tickerName: string) {
   return data;
 }
 
-export async function getStocksData(stock: string) {
-  const tickerCall = await axios
-    .get(`${FINNHUB_BASE_URL}?symbol=${stock}&token=${FINNHUB_TOKEN}`)
-    .catch((error) => {
-      console.log(error);
-    });
+async function makeStockAPICall(endpoint: string) {
+  const tickerCall = await axios.get(endpoint).catch((error) => {
+    console.log(error);
+  });
   return tickerCall;
+}
+
+export async function makeMultipleAPICalls(stocksList: string[]) {
+  const endpoints = stocksList.map((stock) => {
+    return `${FINNHUB_BASE_URL}?symbol=${stock}&token=${FINNHUB_TOKEN}`;
+  });
+  const promises = endpoints.map(makeStockAPICall);
+  const responses = await Promise.all(promises);
+  //format
+  const data: StockDataType[] = responses.map((res, key) => {
+    return {
+      name: stocksList[key],
+      ...res?.data,
+    };
+  });
+  return data;
 }
