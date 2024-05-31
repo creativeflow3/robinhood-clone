@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import LineGraph from './LineGraph.tsx';
 import TimeLine from './TimeLine.tsx';
 import Chip from '@mui/material/Chip';

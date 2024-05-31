@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import Logo from './assets/robinhood.svg';
 import './Header.css';
 

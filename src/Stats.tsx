@@ -1,4 +1,4 @@
-import { useState, useEffect, type ReactNode } from 'react';
+import React, { useState, useEffect, type ReactNode } from 'react';
 import './Stats.css';
 import StatsRow from './StatsRow.tsx';
 import { StockDataType, TickerType } from './types.ts';

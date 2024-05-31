@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react';
+import React, { useState, type ReactNode } from 'react';
 import './StatsRow.css';
 import StockSVG from './assets/stock.svg';
 import NegStockSVG from './assets/negStock.svg';
