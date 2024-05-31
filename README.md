@@ -25,3 +25,7 @@
 - Go to firebase firestore and create an account.
 - Copy the .env_example file and rename it .env, and add your environment values there. The .gitignore will already ignore the .env file.
 - git clone, and run npm install, then npm run dev.
+
+## Screenshot:
+
+![Screenshot 2024-05-25 at 4 35 09 PM](https://github.com/creativeflow3/robinhood-clone/assets/4514306/173a0a47-e47b-401b-8060-df04ae83e519)
