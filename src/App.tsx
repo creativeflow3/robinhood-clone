@@ -4,8 +4,6 @@ import Stats from './Stats.tsx';
 import './App.css';
 import { type ReactNode } from 'react';
 
-// const key = 'cp57vg9r01qnpsj4talgcp57vg9r01qnpsj4tam0';
-
 function App(): ReactNode {
   return (
     <div className="App">
