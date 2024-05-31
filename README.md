@@ -15,7 +15,7 @@
 - Remove firebase calls, and replace with a NodeJS call to mongodb
 - Make the layout mobile friendly
 - Add a registration / login screen
-- Make sure NodeJS backend has athorization middleware
+- Make sure NodeJS backend has authorization middleware
 - Cleanup of linting, eslint and prettier
 - Jest unit tests
 
