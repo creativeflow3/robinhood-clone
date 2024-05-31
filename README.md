@@ -1,30 +1,16 @@
-# React + TypeScript + Vite
+# Robinhood Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## This app is a simple robinhood clone. It is based on tutorial here: https://www.youtube.com/watch?v=TxggrQ0nHjY with a few changes:
 
-Currently, two official plugins are available:
+- This uses Vite instead of Create React App since CRA is now deprecated.
+- Some cleanup and simplification of the axios based API calls and firebase calls
+- All files are typescript enabled with types created for useState, props, etc
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Updates to come;
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Remove firebase calls, and replace with a NodeJS call to mongodb
+- Make the layout mobile friendly
+- Add a registration / login screen
+- Make sure NodeJS backend has athorization middleware
+- Cleanup of linting, eslint and prettier
+- Jest unit tests
