@@ -24,3 +24,4 @@
 - Go to finnhub https://finnhub.io/ and get an api key.
 - Go to firebase firestore and create an account.
 - Copy the .env_example file and rename it .env, and add your environment values there. The .gitignore will already ignore the .env file.
+- git clone, and run npm install, then npm run dev.
