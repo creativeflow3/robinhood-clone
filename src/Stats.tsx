@@ -39,7 +39,7 @@ function Stats(): ReactNode {
             data[i] = { ...res, ...data[i] };
           }
         }
-      } // miCDg7SqCrOm7Pf0ozWg
+      }
       setMyStocks(data);
     }
     fetchData();
