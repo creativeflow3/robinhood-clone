@@ -7,6 +7,8 @@
 - This uses Vite instead of Create React App since CRA is now deprecated.
 - Some cleanup and simplification of the axios based API calls and firebase calls
 - All files are typescript enabled with types created for useState, props, etc
+- Chart.js calls had to be completely refactored because the youtube file used an old version.
+- Firestore calls had to be refactored due to changes since the video being made.
 
 ## Updates to come:
 
