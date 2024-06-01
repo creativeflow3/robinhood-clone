@@ -36,6 +36,10 @@
   color: #5ac53b;
 }
 
+.row__percentage__red {
+  color: #ec5e2a;
+}
+
 .row_chart {
   padding: 0 10px;
 }

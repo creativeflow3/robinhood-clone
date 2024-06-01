@@ -28,8 +28,10 @@ function StatsRow({ name, openPrice, price, volume }: Row): ReactNode {
 
   const shares = tickerData?.shares ? tickerData.shares : volume;
   const stockImage = percentage < 0 ? NegStockSVG : StockSVG;
+  const rowPercentageCss =
+    percentage < 0 ? 'row__percentage row__percentage__red' : 'row__percentage';
   return (
-    <div className="row" onClick={buyStock}>
+    <div className="row" onClick={buyStock} data-testid="stats-row">
       <div className="row__intro">
         <h1>{name}</h1>
         <p>{shares && shares + ' shares'}</p>
@@ -39,7 +41,7 @@ function StatsRow({ name, openPrice, price, volume }: Row): ReactNode {
       </div>
       <div className="row__numbers">
         <p className="row__price">{price}</p>
-        <p className="row__percentage"> {Number(percentage).toFixed(2)}%</p>
+        <p className={rowPercentageCss}> {Number(percentage).toFixed(2)}%</p>
       </div>
     </div>
   );

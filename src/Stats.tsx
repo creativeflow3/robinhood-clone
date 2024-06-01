@@ -46,7 +46,7 @@ function Stats(): ReactNode {
   }, []);
 
   return (
-    <div className="stats">
+    <div className="stats" data-testid="stats-column">
       <div className="stats__container">
         <div className="stats__header">
           <p>Stocks</p>
