@@ -13,8 +13,8 @@ function LineGraph(): ReactNode {
   const [stocks, setStocks] = useState<number[]>([]);
   const [daily, setDaily] = useState<string[]>([]);
   const createMockData = () => {
-    const stockValues = [];
-    const formattedDates = [];
+    const stockValues: number[] = [];
+    const formattedDates: string[] = [];
     let value = 50;
     for (let i = 0; i < 200; i++) {
       const date = new Date();
