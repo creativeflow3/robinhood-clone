@@ -1,3 +1,4 @@
+import React from 'react';
 import Header from './Header.tsx';
 import NewsFeed from './NewsFeed.tsx';
 import Stats from './Stats.tsx';
