@@ -28,6 +28,9 @@ function Stats(): ReactNode {
       setStockData(dataReturned);
     }
     fetchStockData();
+  }, []);
+
+  useEffect(() => {
     async function fetchData() {
       const data: TickerType[] = await fetchDataFromFirestore();
       // match with data from api
@@ -43,7 +46,7 @@ function Stats(): ReactNode {
       setMyStocks(data);
     }
     fetchData();
-  }, []);
+  }, [stockData]);
 
   return (
     <div className="stats" data-testid="stats-column">
