@@ -79,7 +79,7 @@ function LineGraph(): ReactNode {
   };
 
   return (
-    <div className="linegraph">
+    <div className="linegraph" data-testid="test-graph">
       <Line {...lineData} />
     </div>
   );
