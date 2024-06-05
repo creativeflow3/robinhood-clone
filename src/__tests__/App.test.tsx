@@ -5,6 +5,12 @@ import App from '../App.tsx';
 // import Header from '../Header.tsx';
 // const mockHeader = vi.fn();
 
+global.ResizeObserver = vi.fn().mockImplementation(() => ({
+  observe: vi.fn(),
+  unobserve: vi.fn(),
+  disconnect: vi.fn(),
+}));
+
 /*
 vi.mock('./Header', () => () => 'Header');
 vi.mock('./NewsFeed', () => () => 'NewsFeed');
