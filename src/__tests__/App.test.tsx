@@ -1,5 +1,5 @@
 import React from 'react';
-import { describe, it, expect, test, vi } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { render } from '@testing-library/react';
 import App from '../App.tsx';
 
@@ -10,13 +10,10 @@ global.ResizeObserver = vi.fn().mockImplementation(() => ({
   disconnect: vi.fn(),
 }));
 
-test('demo', () => {
-  expect(true).toBe(true);
-});
-
 describe('render', () => {
   it('renders the main page', () => {
-    render(<App />);
-    expect(true).toBeTruthy();
+    const { container } = render(<App />);
+    expect(container).toBeDefined();
+    // expect(true).toBeTruthy();
   });
 });
