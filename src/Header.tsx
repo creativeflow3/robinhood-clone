@@ -7,14 +7,14 @@ function Header(): ReactNode {
     <div className="header__wrapper">
       {/* logo */}
       <div className="header__logo">
-        <img src={Logo} width={25} />
+        <img src={Logo} width={25} data-testid="test-logo" />
       </div>
       <div className="header__search">
         <div className="header__searchContainer">
-          <input placeholder="Search" type="text" />
+          <input placeholder="Search" type="text" data-testid="test-search" />
         </div>
       </div>
-      <div className="header__menuItems">
+      <div className="header__menuItems" data-testid="test-menu-items">
         <a href="#">Free Stocks</a>
         <a href="#">Portfolio</a>
         <a href="#">Cash</a>
