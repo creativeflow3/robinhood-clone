@@ -20,7 +20,7 @@ const popularTopics = [
 
 function NewsFeed(): ReactNode {
   return (
-    <div className="newsfeed">
+    <div className="newsfeed" test-dataid="test-newsfeed">
       <div className="newsfeed__container">
         <div className="newsfeed__chartSection">
           <div className="newsfeed__portfolio">
