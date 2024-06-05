@@ -1,21 +1,15 @@
 import React from 'react';
 import { describe, it, expect, test, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from '../App.tsx';
-// import Header from '../Header.tsx';
-// const mockHeader = vi.fn();
 
+// tests will error out because chart.js has a built in ResizeObserver.
 global.ResizeObserver = vi.fn().mockImplementation(() => ({
   observe: vi.fn(),
   unobserve: vi.fn(),
   disconnect: vi.fn(),
 }));
 
-/*
-vi.mock('./Header', () => () => 'Header');
-vi.mock('./NewsFeed', () => () => 'NewsFeed');
-vi.mock('./Stats', () => () => 'Stats');
-*/
 test('demo', () => {
   expect(true).toBe(true);
 });
