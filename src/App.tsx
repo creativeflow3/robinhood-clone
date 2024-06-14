@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './Header.tsx';
-import NewsFeed from './NewsFeed.tsx';
-import Stats from './Stats.tsx';
+import Header from './components/Header.tsx';
+import NewsFeed from './components/NewsFeed.tsx';
+import Stats from './components/Stats.tsx';
 import './App.css';
 import { type ReactNode } from 'react';
 

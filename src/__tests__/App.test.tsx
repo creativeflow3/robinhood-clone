@@ -14,6 +14,5 @@ describe('render', () => {
   it('renders the main page', () => {
     const { container } = render(<App />);
     expect(container).toBeDefined();
-    // expect(true).toBeTruthy();
   });
 });

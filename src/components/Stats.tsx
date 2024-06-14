@@ -1,11 +1,11 @@
 import React, { useState, useEffect, type ReactNode } from 'react';
 import './Stats.css';
 import StatsRow from './StatsRow.tsx';
-import { StockDataType, TickerType } from './types.ts';
+import { StockDataType, TickerType } from '../types.ts';
 import {
   fetchDataFromFirestore,
   makeMultipleAPICalls,
-} from './api/getApiData.ts';
+} from '../api/getApiData.ts';
 
 const stocksList = [
   'AAPL',

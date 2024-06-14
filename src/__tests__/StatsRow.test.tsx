@@ -1,7 +1,7 @@
 import React from 'react';
 import { describe, it, expect } from 'vitest';
 import { render } from '@testing-library/react';
-import StatsRow from '../StatsRow.tsx';
+import StatsRow from '../components/StatsRow.tsx';
 
 describe('Render StatsRow', () => {
   it('generate stats row', () => {

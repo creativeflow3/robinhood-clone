@@ -1,5 +1,5 @@
 import React, { type ReactNode } from 'react';
-import Logo from './assets/robinhood.svg';
+import logo from './assets/robinhood.svg';
 import './Header.css';
 
 function Header(): ReactNode {
@@ -7,7 +7,7 @@ function Header(): ReactNode {
     <div className="header__wrapper">
       {/* logo */}
       <div className="header__logo">
-        <img src={Logo} width={25} data-testid="test-logo" />
+        <img src={logo} width={25} data-testid="test-logo" />
       </div>
       <div className="header__search">
         <div className="header__searchContainer">
