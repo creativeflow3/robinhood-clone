@@ -1,5 +1,5 @@
 import React, { type ReactNode } from 'react';
-import logo from './assets/robinhood.svg';
+import logo from '../assets/robinhood.svg';
 import './Header.css';
 
 function Header(): ReactNode {

@@ -1,7 +1,7 @@
 import React, { useState, type ReactNode } from 'react';
 import './StatsRow.css';
-import StockSVG from './assets/stock.svg';
-import NegStockSVG from './assets/negStock.svg';
+import StockSVG from '../assets/stock.svg';
+import NegStockSVG from '../assets/negStock.svg';
 import { TickerType } from '../types.ts';
 import { fetchStockTicker } from '../api/getApiData.ts';
 
