@@ -9,3 +9,13 @@ describe('Render Stats', () => {
     expect(getByTestId('stats-column')).toBeInTheDocument();
   });
 });
+
+describe('Testing UseEffect API calls', () => {
+  beforeEach(() => {
+    fetchMock.resetMocks();
+  });
+
+  it('renders users when API call succeeds', async () => {});
+
+  it('renders error when API call fails', async () => {});
+});

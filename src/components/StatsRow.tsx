@@ -17,6 +17,7 @@ function StatsRow({ name, openPrice, price, volume }: Row): ReactNode {
 
   async function getTicker(tickerName: string): Promise<void> {
     const data: TickerType[] = await fetchStockTicker(tickerName);
+    console.log('data', data);
     setTickereData(data[0]);
   }
   const percentage =

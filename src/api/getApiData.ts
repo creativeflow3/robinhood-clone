@@ -36,7 +36,7 @@ export async function fetchStockTicker(tickerName: string) {
     updateDoc(ref, {
       shares: shares + 1,
     });
-    data.push({ id: item.id, ticker, shares: parseInt(shares) });
+    data.push({ id: item.id, ticker, shares: parseInt(shares + 1) });
   });
   return data;
 }
